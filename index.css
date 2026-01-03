@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-gold: #D4AF37;
+  --secondary-bronze: #C9A961;
+  --dark-navy: #0A1628;
+  --medium-navy: #1a2942;
+  --light-gold: #F4E4C1;
+  --white: #FFFFFF;
+  --off-white: #F8F9FA;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-slate-800 bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: var(--primary-gold);
+  }
+  
+  .bg-gold {
+    background-color: var(--primary-gold);
+  }
+  
+  .border-gold {
+    border-color: var(--primary-gold);
+  }
+
+  .text-navy {
+    color: var(--dark-navy);
+  }
+
+  .bg-navy {
+    background-color: var(--dark-navy);
+  }
+}
