@@ -50,6 +50,25 @@ function initHeader() {
   });
 }
 
+// Toggle header "scrolled" class and swap logo versions for better contrast
+(function () {
+    const header = document.getElementById('header');
+    if (!header) return;
+
+    const THRESHOLD = 60; // px scrolled before header becomes solid
+    function updateHeader() {
+        if (window.scrollY > THRESHOLD) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    // run on load and listen to scroll
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+})();
+
 /**
  * Mobile menu toggle
  */
